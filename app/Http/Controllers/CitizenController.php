@@ -44,4 +44,11 @@ class CitizenController extends Controller
 
         return response()->json($citizen, 200);
     }
+
+    public function fetchAllCitizens ()
+    {
+        $citizens = $this->citizenRepository->fetchAll();
+
+        return response()->json($citizens, 200);
+    }
 }

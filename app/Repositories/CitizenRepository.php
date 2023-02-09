@@ -46,4 +46,9 @@ class CitizenRepository implements CitizenRepositoryInterface
     public function getCitizenByName($citizen_name) {
         return Citizen::where('full_name','LIKE','%'.$citizen_name.'%')->select(['id','full_name','gender'])->get();
     }
+
+    public function fetchAll() {
+
+        return Citizen::with('ward')->get();
+    }
 }

@@ -36,6 +36,7 @@ Method | Route | Description | Payload
 `POST` | `/api/login` | login an admin user | email and password
 `POST` | `/api/logout` | logout an admin user | 
 `GET` | `/api/citizens/search/{citizen_name}` | search citizens by name | 
+`GET` | `/api/public/citizens` | get all citizens (public api) |
 
 ## Setup
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.

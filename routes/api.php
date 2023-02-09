@@ -22,9 +22,11 @@ Route::post('login', [AuthController::class, 'login']);
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('citizens', [CitizenController::class, 'create']);
     Route::post('logout', [AuthController::class, 'logout']);
+    Route::get('citizens', [CitizenController::class, 'allCitizens']);
+    Route::get('citizens/{citizen_id}', [CitizenController::class, 'getCitizen']);
+    Route::get('citizens/search/{citizen_name}', [CitizenController::class, 'getCitizenByName']);
 });
 
-Route::get('citizens', [CitizenController::class, 'allCitizens']);
-Route::get('citizens/{citizen_id}', [CitizenController::class, 'getCitizen']);
-Route::get('citizens/search/{citizen_name}', [CitizenController::class, 'getCitizenByName']);
+
+Route::get('public/citizens', [CitizenController::class, 'fetchAllCitizens']);
 
