@@ -35,6 +35,7 @@ Method | Route | Description | Payload
 `POST` | `/api/register` | register new admin user | name, email, password and password_confirmation
 `POST` | `/api/login` | login an admin user | email and password
 `POST` | `/api/logout` | logout an admin user | 
+`GET` | `/api/citizens/search/{citizen_name}` | fetch all citizens by name | 
 
 ## Setup
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.

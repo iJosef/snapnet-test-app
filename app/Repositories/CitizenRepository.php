@@ -42,4 +42,8 @@ class CitizenRepository implements CitizenRepositoryInterface
 
         return Citizen::with('ward')->findOrFail($citizen_id);
     }
+
+    public function getCitizenByName($citizen_name) {
+        return Citizen::where('full_name','LIKE','%'.$citizen_name.'%')->select(['id','full_name','gender'])->get();
+    }
 }

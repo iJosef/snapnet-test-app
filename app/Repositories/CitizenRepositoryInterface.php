@@ -11,4 +11,6 @@ interface CitizenRepositoryInterface
     public function all();
 
     public function showCitizen($citizen_id);
+
+    public function getCitizenByName($citizen_name);
 }

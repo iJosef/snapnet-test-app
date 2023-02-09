@@ -37,4 +37,11 @@ class CitizenController extends Controller
 
         return response()->json($citizen, 200);
     }
+
+    public function getCitizenByName($citizen_name)
+    {
+        $citizen = $this->citizenRepository->getCitizenByName($citizen_name);
+
+        return response()->json($citizen, 200);
+    }
 }

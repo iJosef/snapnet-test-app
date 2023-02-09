@@ -26,4 +26,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 Route::get('citizens', [CitizenController::class, 'allCitizens']);
 Route::get('citizens/{citizen_id}', [CitizenController::class, 'getCitizen']);
+Route::get('citizens/search/{citizen_name}', [CitizenController::class, 'getCitizenByName']);
 
