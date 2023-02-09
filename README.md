@@ -34,7 +34,7 @@ Method | Route | Description | Payload
 `GET` | `/api/citizen/{citizen_id}` | get a particular citizen | citizen_id
 `POST` | `/api/register` | register new admin user | name, email, password and password_confirmation
 `POST` | `/api/login` | login an admin user | email and password
-`POST` | `/api/logout` | logout an admin user | token
+`POST` | `/api/logout` | logout an admin user | 
 
 ## Setup
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -56,5 +56,5 @@ These instructions will get you a copy of the project up and running on your loc
     If all goes well 
   - Visit http://127.0.0.1:8300 on your browser to view laravel home
   
-  if Seeding goes well, you should be able to start running the tests
+  if Seeding goes well, you should be able to start testing endpoints with Postman
 
